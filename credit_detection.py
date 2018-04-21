@@ -123,7 +123,7 @@ checkpointer=ModelCheckpoint(filepath='model_me.h5',verbose=1,save_best_only=Tru
 tensorboard=TensorBoard(log_dir='./logs',histogram_freq=0,\
 		write_graph=True,write_images=True)
 
-'''
+
 # 训练
 hist=auto_encoder.fit(X_train,X_train,epochs=nb_epoch,\
 	batch_size=batch_size,shuffle=True,validation_data=(X_test,X_test),\
@@ -136,7 +136,7 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train','test'],loc='upper right')
 plt.show()
-'''
+
 
 # 导入model
 auto_encoder=load_model('model_me.h5')
